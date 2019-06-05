@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: spboyerkspipelines 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spboyerkspipelines 
+    spec:
+      containers:
+        - name: spboyerkspipelines 
+          image: shayne.azurecr.io/spboyerkspipelines 
+          ports:
+          - containerPort: 3000
